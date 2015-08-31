@@ -35,6 +35,17 @@
             padding: 3px 10px;
         }
     </style>
+    <script type="text/javascript">
+        function generatePassword(len) {
+            var vars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            var pwd = "";
+            for (var i = 0; i < len; i++) {
+                pwd += vars.charAt(Math.ceil(Math.random() * 100000000) % vars.length);
+            }
+            document.getElementById('password').value = pwd;
+            document.getElementById('password_label').innerHTML = pwd;
+        }
+    </script>
 </head>
 <body>
 <div class="wrapper">
@@ -53,16 +64,21 @@
         </ul>
     </header>
     <section>
-        <form method="post" action="./password.php">
-            <p><input class="input" type="text" name="username" value="" placeholder="用户名"/></p>
+        <form method="post" action="./password.html">
+            <p><input class="input" type="text" name="username" value="" placeholder="账号"/></p>
 
-            <p><input class="input" type="password" name="password" value="" placeholder="密码"/></p>
+            <p><input class="input" type="password" name="password" id="password" value="" placeholder="密码"/></p>
 
             <p>
                 <button class="btn" type="submit" name="submit">Submit</button>
                 &nbsp;
+                <button class="btn" type="button" name="generate" onclick="generatePassword(16);">Normal</button>
+                &nbsp;
+                <button class="btn" type="button" name="generate" onclick="generatePassword(32);">Strong</button>
+                &nbsp;
                 <button class="btn" type="reset" name="reset">Reset</button>
             </p>
+            <p><span id="password_label"></span></p>
         </form>
     </section>
 </div>
