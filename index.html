@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Password by boboweb</title>
@@ -13,29 +13,66 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
+    <style>
+        section > form {
+            padding: 30px;
+        }
+
+        section > form > p {
+            text-align: center;
+        }
+
+        .input {
+            width: 90%;
+            line-height: 2;
+            font-size: 14px;
+            padding: 3px 5px;
+        }
+
+        .btn {
+            line-height: 1.8;
+            font-size: 14px;
+            padding: 3px 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header>
         <h1>Password</h1>
+
         <p>Password Generator</p>
-        <p class="view"><a href="https://github.com/boboweb/password">View the Project on GitHub <small>boboweb/password</small></a></p>
+
+        <p class="view"><a href="https://github.com/boboweb/password">View the Project on GitHub
+            <small>boboweb/password</small>
+        </a></p>
         <ul>
-          <li><a href="https://github.com/boboweb/password/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/boboweb/password/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/boboweb/password">View On <strong>GitHub</strong></a></li>
+            <li><a href="https://github.com/boboweb/password/zipball/master">Download <strong>ZIP File</strong></a></li>
+            <li><a href="https://github.com/boboweb/password/tarball/master">Download <strong>TAR Ball</strong></a></li>
+            <li><a href="https://github.com/boboweb/password">View On <strong>GitHub</strong></a></li>
         </ul>
-      </header>
-      <section>
-        <p><input type="text" name="username" value="" placeholder="用户名"/></p>
-        <p><input type="password" name="password" value="" placeholder="密码"/></p>
-      </section>
-    </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/boboweb">boboweb</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
+    </header>
+    <section>
+        <form method="post" action="./">
+            <p><input class="input" type="text" name="username" value="" placeholder="用户名"/></p>
+
+            <p><input class="input" type="password" name="password" value="" placeholder="密码"/></p>
+
+            <p>
+                <button class="btn" type="submit" name="submit">Submit</button>
+                &nbsp;
+                <button class="btn" type="reset" name="reset">Reset</button>
+            </p>
+        </form>
+    </section>
+</div>
+<footer>
+    <p>Project maintained by <a href="https://github.com/boboweb">boboweb</a></p>
+
+    <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+</footer>
+<!--[if !IE]>
+<script>fixScale(document);</script><![endif]-->
+
+</body>
 </html>
