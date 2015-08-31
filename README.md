@@ -2,4 +2,5 @@
 
 Password Generator can be save password to Chrome password store.
 
-Visit it: http://boboweb.github.io/password/
+Github.io: http://boboweb.github.io/password/
+Sinaapp: http://chromepassword.sinaapp.com/
